@@ -12,15 +12,72 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <style>
+      hr {
+        border: 0;
+        height: 1px;
+        background: #ddd;
+        margin: 40px 0;
+      }
+      .project-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px;
+        margin-top: 20px;
+      }
+      .card {
+        background: #fdfdfd;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .card h3 {
+        margin-top: 0;
+      }
+      .card p {
+        flex-grow: 1;
+      }
+      .tags {
+        margin: 15px 0;
+      }
+      .tag {
+        display: inline-block;
+        background: #eee;
+        border-radius: 3px;
+        padding: 4px 8px;
+        margin: 2px;
+        font-size: 12px;
+        font-weight: 500;
+        color: #333;
+      }
+      .docs-list {
+        padding-left: 20px;
+        list-style: disc;
+        margin-top: 10px;
+      }
+      .docs-list li {
+        margin-bottom: 5px;
+      }
+      .course-list ul {
+        padding-left: 20px;
+        margin-top: 10px;
+      }
+      .course-list li {
+        margin-bottom: 10px;
+      }
+    </style>
   </head>
   <body>
     <div class="wrapper">
       <header>
         <h1>Tejas Bana</h1>
-        <img src="./img/photo.jpg" style=" border-radius: 10%; width:170px;" alt="Avatar">
+        <img src="./img/photo.jpeg" style=" border-radius: 10%; width:170px;" alt="Avatar">
         <p></p>
-        <p> tejasbana[at]gmail<br>
-           Pittsburgh, PA
+        <p> Contact: tejasbana [at] gmail<br>
+           San Francisco, CA
         </p>
         <!-- <img  width="18" src="./img/github.png">   <a class="color" href="https://github.com/tejasbana">Github</a>
         <img  width="18" src="./img/github.png">   <a class="color" href="https://github.com/tejasbana">Github</a>
@@ -30,7 +87,7 @@
         <!-- <p> Pune, India</p> -->
         <p class="Links">
           <h3 style="margin:-20px 0 10px 0;">Links</h3>
-          <img  width="18" >   <strong><a class="color" href="https://drive.google.com/file/d/13IRuLRjGnuI8ny3S8T17x8Av1tA-XFfe/view?usp=sharing">Resume</a></strong><br>
+          <img  width="18" >   <strong><a class="color" href="./Resume_2025.pdf">Resume</a></strong><br>
           <img  width="18" >   <a class="color" href="https://linkedin.com/in/tejas-bana-a53555166/">Linkedln</a><br>
           <img  width="18" >   <a class="color" href="https://github.com/tejasbana">GitHub</a><br>
           <img  width="18" >   <a class="color" href="https://www.hackerrank.com/tejasbana">HackerRank</a><br>
@@ -40,83 +97,85 @@
       </header>
       <section>
         <h2>About Me</h2>
-        <p>I am a graduate student pursuing a Master of Science in Electrical and Computer Engineering at Carnegie Mellon University. My background spans both research and industry, with a strong emphasis on generative models, privacy-preserving machine learning, and on-device machine learning. I thrive on the challenges of applied machine learning problems, relishing the opportunity to apply my expertise to real-world scenarios.</p>
-
-        <p>In my recent industry experience, I had the privilege of developing deep learning systems for understanding chemical reactions and molecular representations. Among my most memorable projects is the time I spent collaborating with the Indian Army to create dynamic camouflage pattern generation software.</p>
-        <!-- <p>Research Experience: I am working at IIT Bombay on the Virtual Tryon and similarity learning for fashion items using Vision Transformer. Before that, I spent a couple of months working with the <strong>Indian Army</strong> to create a dynamic camouflage pattern generator software. The project has received a lot of attention and is under final testing.</p>
-        <p>Industry Experience: As a data science intern at <a href="https://www.scaler.com/data-science-course/">Scaler Academy</a>, I prepare lecture scripts, write articles and set questions on statistics, data preprocessing, and deep learning. Before that, I worked with Architects from <a href="https://uniworksdesigns.com">Uniworks Designs</a> to automate the process of designing architectural floor plans using graph-constrained generative adversarial networks.</p>
- -->
- 		<h3>Courses & Projects</h3>
-
-        <ul>
-        <li>
         <p>
-        <span class="paper">Learning-Based Image Synthesis <a href="https://learning-image-synthesis.github.io/sp23/">16-726</a></span><br>
+          I am a Machine Learning Engineer at Albert Invent, where I build agentic AI systems to accelerate scientific R&D. My work focuses on creating robust, reliable LLM agents by building multi-agent architectures, relational Retrieval-Augmented Generation (RAG), and prompting techniques.
+        </p>
+        <p>
+          I am passionate about the frontiers of generative AI, with a deep interest in representation learning and diffusion models. My background includes a Master's from Carnegie Mellon University and a portfolio of projects spanning generative models, computer vision, and privacy-preserving ML. I love translating complex technical concepts into real-world impact.
+        </p>
+
+        <hr>
+
+        <h2>LLM Agents & Applied AI</h2>
+        <div class="project-grid">
+          <div class="card">
+            <h3>Agentic Systems for Scientific R&D</h3>
+            <p><em>Machine Learning Engineer II at Albert Invent</em></p>
+            <div class="tags">
+              <span class="tag">LLM Agents</span>
+              <span class="tag">Multi-Agent Systems</span>
+              <span class="tag">RAG</span>
+              <span class="tag">Search & Recommendation</span>
+              <span class="tag">LangGraph</span>
+            </div>
+            <p>Promoted to ML Engineer II after leading the development of two core agentic systems:</p>
+            <ul style="padding-left: 20px; margin-top: 0; flex-grow: 1;">
+                <li><b>Agentic Interface:</b> Built a production agent to simplify a complex UI, enabling LLMs to translate user natural language into concrete UI actions and data retrieval. Achieved 91% reliability with RAG and advanced prompting.</li>
+                <li><b>LLM Discovery:</b> Created a chat-based search and recommendation engine scaling to millions of data points, dramatically improving data accessibility for scientists.</li>
+            </ul>
+          </div>
+        </div>
+
+        <hr>
         
+        <h2>Generative Models & Representation Learning</h2>
+        <div class="project-grid">
+          <div class="card">
+            <h3>Learning-Based Image Synthesis (16-726)</h3>
+            <p><em>Carnegie Mellon University</em></p>
+            <div class="tags"><span class="tag">GANs</span><span class="tag">Neural Style Transfer</span><span class="tag">Computer Vision</span></div>
+            <p>A deep dive into generative vision through hands-on projects:</p>
+            <ul class="docs-list">
+                <li><a class="docs" href="https://www.andrew.cmu.edu/course/16-726-sp23/projects/tbana/project/">Main Project: GANs to Understand the Brain</a></li>
+                <li><a class="docs" href="https://www.andrew.cmu.edu/course/16-726-sp23/projects/tbana/proj5/">GAN Photo Editing</a></li>
+                <li><a class="docs" href="https://www.andrew.cmu.edu/course/16-726-sp23/projects/tbana/proj4/">Neural Style Transfer</a></li>
+                <li><a class="docs" href="https://www.andrew.cmu.edu/course/16-726-sp23/projects/tbana/proj3/">When Cats Meet GANs</a></li>
+                <li><a class="docs" href="https://www.andrew.cmu.edu/course/16-726-sp23/projects/tbana/proj2/">Gradient Domain Fusion</a></li>
+                <li><a class="docs" href="https://www.andrew.cmu.edu/course/16-726-sp23/projects/tbana/proj1/">Colorizing Photo Collections</a></li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Generative Vision Seminar (16-895)</h3>
+            <p><em>Carnegie Mellon University</em></p>
+            <div class="tags"><span class="tag">Diffusion Models</span><span class="tag">Generative Models</span><span class="tag">Seminar</span></div>
+            <p>A seminar course exploring the nuances of modern generative models, from understanding their success to critiquing their capabilities for future research. Covered topics like Diffusion Models, VAEs, and Flow-based models.</p>
+            <a class="docs" href="https://sites.google.com/andrew.cmu.edu/16-895-generative-vision/home">Course Page</a>
+          </div>
+          <div class="card">
+            <h3>GANs for Architectural Floorplan Generation</h3>
+            <p><em>ML Intern at Uniworks Designs</em></p>
+            <div class="tags"><span class="tag">GANs</span><span class="tag">Pix2Pix</span><span class="tag">GCP</span><span class="tag">Flask</span></div>
+            <p>Automated the generation of apartment floorplans and furniture layouts using a two-stage GAN pipeline (House-GAN and ArchiGAN). Deployed the model as a service on GCP, reducing initial design time for architects by up to 25%.</p>
+          </div>
+          <div class="card">
+            <h3>Generative Camouflage for the Indian Army</h3>
+            <p><em>R&D ML Intern at College of Military Engineering</em></p>
+            <div class="tags"><span class="tag">Computer Vision</span><span class="tag">Generative Models</span><span class="tag">Mask R-CNN</span><span class="tag">K-Means</span></div>
+            <p>Developed software to generate pixelated, terrain-specific camouflage patterns. The system uses satellite imagery, segments terrain features with Mask R-CNN, and applies a generative algorithm to create 5K resolution patterns in under 60 seconds, significantly reducing vehicle visibility. Received "Best Intern" award for this work.</p>
+            <!-- Tip: Add an image of the generated camouflage here! -->
+          </div>
+          <div class="card">
+            <h3>Siamese Networks for Fashion Similarity</h3>
+            <p><em>R&D ML Intern at IIT Bombay</em></p>
+            <div class="tags"><span class="tag">Representation Learning</span><span class="tag">PyTorch</span><span class="tag">Siamese Networks</span><span class="tag">Triplet Loss</span></div>
+            <p>Built a deep learning system to find visually similar clothing items from a massive dataset. Implemented a Siamese network with triplet loss and multi-class negative sampling to learn powerful image representations. Used Annoy for efficient, real-time nearest-neighbor search.</p>
+          </div>
+        </div>
 
-        Main Project: <a class="docs" href="https://www.andrew.cmu.edu/course/16-726-sp23/projects/tbana/project/">GANs to Understand How the Human Brain Makes Sense of Natural Scenes</a><br>
-        GAN based: <a class="docs" href="https://www.andrew.cmu.edu/course/16-726-sp23/projects/tbana/proj5/">GAN photo editing</a>
-        <a class="docs" href="https://www.andrew.cmu.edu/course/16-726-sp23/projects/tbana/proj4/">Neural Style Transfer</a>
-        <a class="docs" href="https://www.andrew.cmu.edu/course/16-726-sp23/projects/tbana/proj3/">When Cats Meet GANs</a><br>
-        Other: <a class="docs" href="https://www.andrew.cmu.edu/course/16-726-sp23/projects/tbana/proj2/">Gradient Domain Fusion</a>
-        <a class="docs" href="https://www.andrew.cmu.edu/course/16-726-sp23/projects/tbana/proj1/">Colorizing the Prokudin-Gorskii Photo Collection</a>
+        <hr>
         
-         </span><br>
-        </p>
-        </li>
-
-        <li>
-        <p>
-        <span class="paper">Understanding and Critiquing Generative Computer Vision <a href="https://sites.google.com/andrew.cmu.edu/16-895-generative-vision/home">16-895</a></span><br>
-        <span class="authors">Exploring nuances of modern day generative models, understand how they work so well, and develop reasonable critiques of their capabilities to understand how they can be made even better and applicable for diverse downstream research themes.
-        </p>
-        </li>
-
-        <li>
-        <p>
-        <span class="paper">On-Device Machine Learning <a href="https://learning-image-synthesis.github.io/sp23/">11-767</a></span><br>
-        <span class="authors">Learning to build efficient machine learning systems through quantization, pruning, and neural architecture search for optimized power consumption and memory utilization.
-        </p>
-        </li>
-
-        <li>
-        <p>
-        <span class="paper">Neural Signal Processing <a href="https://courses.ece.cmu.edu/18698">18-698</a></span><br>
-        <span class="authors">Learning neural decoding, firing rate estimation, neural system characterization, sensorimotor control, spike sorting, and field potential analysis.
-        </p>
-        </li>
-
-        <li>
-        <p>
-        <span class="paper">Advanced NLP <a href="https://cmu-anlp.github.io/index.html">11-711</a></span><br>
-        </p>
-        </li>
-
-        <li>
-        <p>
-        <span class="paper">Large Language Models Methods and Applications <a href="https://cmu-llms.org/">11-667</a></span><br>
-        </p>
-        </li>
-
-        <li>
-        <p>
-        <span class="paper">Introduction to Machine Learning 18-661</span><br>
-        </p>
-        </li>
-
-        <li>
-        <p>
-        <span class="paper">Computational Models of Neural Systems <a href="https://www.cs.cmu.edu/afs/cs/academic/class/15883-f23/syllabus.html">15-883</a></span><br>
-        </p>
-        </li>
-
-        </ul>
-
-        <h2> Publications</h2>
-
-        <!-- <h3>2021</h3> -->
+        <h2>Publications</h2>
         <ul>
-
           <li>
             <p>
             <span class="paper">Robust Recovery of Adversarial Samples</span><br>
@@ -130,8 +189,6 @@
           <span class="authors">Jatan Loya, Tejas Bana</span><br>
           <span class="conf">International Conference on Cyberworlds (CW 2021)</span><br>
           <a class="docs" href="https://ieeexplore.ieee.org/document/9599353">Paper</a>
-          <!-- <a class="docs" href="">Extended version</a> -->
-          </p>
           </li> 
           
           <li>
@@ -140,11 +197,23 @@
           <span class="authors">Tejas Bana, Jatan Loya, Siddhant Kulkarni</span><br>
           <span class="conf">The Conference on Machine Learning, Optimization and Data science (LOD)</span><br>
           <a class="docs" href="https://arxiv.org/pdf/2106.06321.pdf">Paper</a>
-          <!--<a class="docs" href="./publications/Senate.pdf">Paper</a>-->
-          <!--<a class="docs" href="https://arxiv.org/abs/2006.09628">Extended version</a>-->
           </p>
           </li>       
         </ul>
+
+        <hr>
+
+        <h2>Relevant Coursework</h2>
+        <div class="course-list">
+          <ul>
+            <li><b>On-Device Machine Learning (11-767):</b> Built efficient ML systems via quantization, pruning, and neural architecture search.</li>
+            <li><b>Large Language Models (11-667):</b> Studied methods and applications of modern LLMs.</li>
+            <li><b>Advanced NLP (11-711):</b> Audited course covering advanced topics in Natural Language Processing.</li>
+            <li><b>Neural Signal Processing (18-698):</b> Learned neural decoding, firing rate estimation, and spike sorting.</li>
+            <li><b>Computational Models of Neural Systems (15-883):</b> Explored computational approaches to understanding neural function.</li>
+            <li><b>Introduction to Machine Learning (18-661):</b> Core principles and algorithms of machine learning.</li>
+          </ul>
+        </div>
 
         <!-- <h3>Projects</h3>
 
@@ -286,7 +355,7 @@
 <!--h3>
 <a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span class="octicon octicon-link"></span></a>Publications</h3>
 
-<p>We’ve crafted some handsome templates for you to use. Go ahead and click 'Continue to layouts' to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved.</p>
+<p>We've crafted some handsome templates for you to use. Go ahead and click 'Continue to layouts' to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved.</p>
 
 <h3>
 <a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span class="octicon octicon-link"></span></a>Creating pages manually</h3>
@@ -296,12 +365,12 @@
 <h3>
 <a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor’s GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
 
 <h3>
 <a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
 
-<p>Having trouble with Pages? Check out our <a href="https://help.github.com/pages">documentation</a> or <a href="https://github.com/contact">contact support</a> and we’ll help you sort it out.</p-->
+<p>Having trouble with Pages? Check out our <a href="https://help.github.com/pages">documentation</a> or <a href="https://github.com/contact">contact support</a> and we'll help you sort it out.</p-->
       </section>
       <footer>
         <!-- <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p> -->
